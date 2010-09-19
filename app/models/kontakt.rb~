@@ -4,8 +4,8 @@ validates_presence_of :name
 validates_length_of :name, :minimum => 1 
 belongs_to :user
 has_and_belongs_to_many :tags 
-accepts_nested_attributes_for :tags, :allow_destroy => :true, :reject_if =>
-proc { |attrs| attrs.all? { |k, v| v.blank? } }
+#accepts_nested_attributes_for :tags, :allow_destroy => :true, :reject_if =>
+#proc { |attrs| attrs.all? { |k, v| v.blank? } }
 	
 		
 	def self.user_kontakts(user_id)
