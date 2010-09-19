@@ -1,0 +1,46 @@
+<table id="form_kontakts"  width="80%" align="center" cellpadding="2" cellspacing="0">
+  <tr><td width="20%" style="padding-left: 10; background-color: wheat;">
+
+<%= button_to 'New kontakt', new_kontakt_path %>
+<%= button_to 'Contacts', kontakts_path, :method=>'get' %>
+<% form_tag kontakts_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search by tag", :name => nil %>
+  </p>
+<% end %>
+
+<% @tags.each do |tag| %>
+	
+    <%=h tag.name %>
+    <%= link_to "#{tag.name}", tag_path(:id=>tag.id)  %>
+    <%#= link_to '=>', tag_path(:k_id=>kontakt.id) %>
+    <%#= link_to 'Show', kontakt %>
+    <%#= link_to 'Edit', edit_kontakt_path(kontakt) %>
+    <%#= link_to 'Destroy', kontakt, :confirm => 'Are you sure?', :method => :delete %>
+<br />
+<% end %>
+
+</td>
+    <td width="80%" style="padding-left: 10; background-color: wheat;">
+&nbsp;
+<% unless @tag.nil? %>
+ <% form_for(@tag) do |tag_form| %>
+<table id="table"  width="100%" align="center" style="background-color:wheat" cellpadding="2" cellspacing="0">
+<tr class="odd">
+<td width="20%">Name</td><td><%= h @tag.name %></td>
+</tr>
+</table>
+    <%#= link_to 'Show', @kontakt %><%= button_to 'Contacts', kontakts_path, :method=>'get' %>
+    <%#= link_to 'Edit', edit_kontakt_path(@kontakt) %>
+    <%#= link_to 'Destroy', @kontakt, :confirm => 'Are you sure?', :method => :delete %>
+ <% end %>
+</td>
+  </tr>
+</table>
+
+<% end %>
+<%#= select_tag(:city_id, options_for_select(@kontakt_names)) %> 
+
+
+

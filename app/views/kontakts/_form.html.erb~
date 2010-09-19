@@ -1,0 +1,49 @@
+<%@tags ||= [] ; @new_tags ||= [] %>
+<%# @kontakt.tags.build if @kontakt.tags.empty? %>
+<%=params %>
+<% form_for(@kontakt) do |kontakt_form| %>
+<%= kontakt_form.error_messages %>
+<div class="kontakt_form">
+<% unless @kontakt.nil? %>
+ <% form_for(@kontakt) do |kontakt_form| %>
+<table id="table"  width="80%" align="center" style="background-color:wheat" cellpadding="2" cellspacing="0">
+<tr class="odd">
+<td width="20%">Name</td><td colspan="2"><%= kontakt_form.text_field :name %></td>
+</tr><tr class="odd">
+<td>Lastname</td><td colspan="2"><%= kontakt_form.text_field :lastname %></td>
+</tr><tr class="odd">
+<td>Firstname</td><td colspan="2"><%= kontakt_form.text_field :firstname %></td>
+</tr><tr class="odd">
+<td>Middlename</td><td colspan="2"><%= kontakt_form.text_field :middlename %></td>
+</tr><tr class="odd">
+<td>Email</td><td colspan="2"><%= kontakt_form.text_field :email %></td>
+</tr><tr class="odd">
+<td>Phone number</td><td colspan="2"><%= kontakt_form.text_field :phone_number %></td>
+</tr><tr class="odd">
+<td>Address</td><td colspan="2"><%= kontakt_form.text_field :address %></td>
+</tr>
+<tr class="odd">
+<td>Tags</td>
+<td width="20%">
+<div id="mydiv1">
+<%= render :partial => "showtags" %>
+</td><td><%= render :partial => "tagform" %></td>
+</div>
+</tr>
+
+</table>
+ <% end %>
+</td>
+  </tr>
+</table>
+<% end %>
+</div>
+<%# kontakt_form.fields_for :tags do |tag_form| %>
+<p><%#= tag_form.label :name, 'Tag:' %> <%#= tag_form.text_field :name %> </p>
+<%# unless tag_form.object.nil? || tag_form.object.new_record? %>
+<p><%#= tag_form.label :_delete, 'Remove:' %> <%#= tag_form.check_box :_delete %> </p>
+<%# end %>
+<%# end %>
+<p><center><%= kontakt_form.submit "Save" %></center></p>
+<% end %>
+

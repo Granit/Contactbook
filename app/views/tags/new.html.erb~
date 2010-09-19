@@ -1,0 +1,3 @@
+<%= render :partial => "form" %>
+
+<center><%= button_to 'Back', kontakts_path, :method=>'get' %></center>

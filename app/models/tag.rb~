@@ -1,0 +1,18 @@
+class Tag < ActiveRecord::Base
+
+validates_presence_of :name
+validates_length_of :name, :minimum => 1 
+has_and_belongs_to_many :kontakts
+	
+	def self.search(search, user_id)
+	  if search
+		find(:all, :conditions => ["name LIKE ? AND user_id = ?", "%#{search}%", user_id])
+	  else
+		find(:all, :conditions => ["user_id = ?", user_id])
+	  end
+	end
+	
+	def self.find_tag(name, user_id)
+		find(:all, :conditions => ["name = ? AND user_id = ?", name, user_id])
+	end
+end

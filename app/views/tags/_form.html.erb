@@ -1,0 +1,23 @@
+<%@tags ||= [] ; @new_tags ||= [] %>
+<%# @kontakt.tags.build if @kontakt.tags.empty? %>
+<%=params %>
+<% form_for(@tag) do |tag_form| %>
+<%= tag_form.error_messages %>
+<div class="tag_form">
+<% unless @tag.nil? %>
+ <% form_for(@tag) do |tag_form| %>
+<table id="table"  width="80%" align="center" style="background-color:wheat" cellpadding="2" cellspacing="0">
+<tr class="odd">
+<td width="20%">Name</td><td colspan="2"><%= tag_form.text_field :name %></td>
+</tr>
+</table>
+ <% end %>
+</td>
+  </tr>
+</table>
+<% end %>
+</div>
+
+<p><center><%= tag_form.submit "Save" %></center></p>
+<% end %>
+

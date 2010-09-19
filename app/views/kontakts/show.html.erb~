@@ -1,0 +1,33 @@
+<%#=params %>
+<table id="table"  width="80%" align="center" style="background-color:wheat" cellpadding="2" cellspacing="0">
+<tr class="odd">
+<td width="20%">Name</td><td colspan="2"><%= h @kontakt.name %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Lastname</td><td colspan="2"><%=h @kontakt.lastname %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Firstname</td><td colspan="2"><%= h @kontakt.firstname %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Middlename</td><td colspan="2"><%= h @kontakt.middlename  %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Email</td><td colspan="2"><%= h @kontakt.email %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Phone number</td><td colspan="2"><%= h @kontakt.phone_number%>&nbsp;</td>
+</tr><tr class="odd">
+<td>Address</td><td colspan="2"><%= h @kontakt.address %>&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>Tags</td><td colspan="2"><%@tag_names.each do |tag_name| %>
+<%= h tag_name %>
+<%end %>
+&nbsp;</td>
+</tr>
+</table>
+
+<%# @kontakt.tags.each do |c| %>
+<p> <%#=h c.name%> </p>
+<%# end %>
+<center>
+<%= link_to 'Back', kontakts_path %> |
+<%= link_to 'Edit', edit_kontakt_path(@kontakt) %> |
+<%= link_to 'Destroy', @kontakt, :confirm => 'Are you sure?', :method => :delete %>
+</center>

@@ -1,0 +1,60 @@
+<table id="form_kontakts"  width="80%" align="center" cellpadding="2" cellspacing="0">
+  <tr><td width="20%" style="padding-left: 10; background-color: wheat;">
+
+<%= button_to 'New kontakt', new_kontakt_path %>
+<%= button_to 'Tags', tags_path, :method => 'get'%>
+<% form_tag kontakts_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search by name", :name => nil %>
+  </p>
+<% end %>
+
+
+<% @kontakts.each do |kontakt| %>
+	
+    <%= link_to "#{kontakt.name}", kontakts_path(:k_id=>kontakt.id)  %>
+   
+    <%#= link_to 'Show', kontakt %>
+    <%#= link_to 'Edit', edit_kontakt_path(kontakt) %>
+    <%#= link_to 'Destroy', kontakt, :confirm => 'Are you sure?', :method => :delete %>
+<br />
+<% end %>
+
+</td>
+    <td width="80%" style="padding-left: 10; background-color: wheat;">
+&nbsp;
+<% unless @kontakt.nil? %>
+ <% form_for(@kontakt) do |kontakt_form| %>
+<table id="table"  width="100%" align="center" style="background-color:wheat" cellpadding="2" cellspacing="0">
+<tr class="odd">
+<td width="20%">Name</td><td><%= h @kontakt.name %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Lastname</td><td><%= h @kontakt.lastname %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Firstname</td><td><%= h @kontakt.firstname %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Middlename</td><td><%= h @kontakt.middlename %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Email</td><td><%= h @kontakt.email %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Phone number</td><td><%= h @kontakt.phone_number %>&nbsp;</td>
+</tr><tr class="odd">
+<td>Address</td><td><%= h @kontakt.address %>&nbsp;</td>
+<tr class="odd">
+<td>Tags</td><td colspan="2"><%@tag_names.each do |tag_name| %>
+<%= h tag_name %><br />
+<%end %>&nbsp;</td>
+</tr>
+</table>
+    <%= link_to 'Show', @kontakt %>
+    <%= link_to 'Edit', edit_kontakt_path(@kontakt) %>
+    <%= link_to 'Destroy', @kontakt, :confirm => 'Are you sure?', :method => :delete %>
+ <% end %>
+</td>
+  </tr>
+</table>
+
+<% end %>
+
+

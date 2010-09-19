@@ -1,0 +1,8 @@
+class CreateTags2 < ActiveRecord::Migration
+  def self.up
+  remove_column :kontakts, :tag_id, :string
+  end
+
+  def self.down
+  end
+end

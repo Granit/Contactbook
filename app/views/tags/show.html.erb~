@@ -1,0 +1,17 @@
+<%=params %>
+<table id="table"  width="80%" align="center" style="background-color:wheat" cellpadding="2" cellspacing="0">
+<tr class="odd">
+<td width="20%">Name</td><td colspan="2"><%= h @tag.name %>&nbsp;</td>
+</tr>
+<tr class="odd">
+<td>Kontakts</td><td colspan="2"><%@kontakt_names.each do |kontakt_name| %>
+<%= h kontakt_name %>
+<%end %>
+&nbsp;</td>
+</tr>
+</table>
+<center>
+<%= link_to 'Edit', edit_tag_path(@tag) %> |
+<%= link_to 'Back', tags_path %> |
+<%= link_to 'Destroy', @tag, :confirm => 'Are you sure?', :method => :delete %>
+</center>

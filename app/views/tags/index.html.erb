@@ -1,0 +1,49 @@
+<table id="form_kontakts"  width="80%" align="center" cellpadding="2" cellspacing="0">
+  <tr><td width="20%" style="padding-left: 10; background-color: wheat;">
+
+<%= button_to 'New tag', new_tag_path %>
+<%= button_to 'Contacts', kontakts_path, :method=>'get' %>
+<% form_tag tags_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search by tag", :name => nil %>
+  </p>
+<% end %>
+
+<% @tags.each do |tag| %>
+	
+    <%= link_to "#{tag.name}", tags_path(:t_id=>tag.id)  %>
+    <%#= link_to 'Edit', edit_kontakt_path(kontakt) %>
+    <%#= link_to 'Destroy', kontakt, :confirm => 'Are you sure?', :method => :delete %>
+<br />
+<% end %>
+
+</td>
+    <td width="80%" style="padding-left: 10; background-color: wheat;">
+&nbsp;
+<% unless @tag.nil? %>
+ <% form_for(@tag) do |tag_form| %>
+<table id="table"  width="100%" align="center" style="background-color:wheat" cellpadding="2" cellspacing="0">
+<tr class="odd">
+<td width="20%">Name</td><td><%= h @tag.name %></td>
+</tr>
+<tr class="odd">
+<td width="20%">Contacts</td><td>
+<% @tag.kontakts.each do |kontakt|%>
+<%= h kontakt.name%><br />
+<%end%>&nbsp;
+</td>
+</tr>
+</table>
+    <%= link_to 'Show', @tag %>
+    <%= link_to 'Edit', edit_tag_path(@tag) %>
+    <%= link_to 'Destroy', @tag, :confirm => 'Are you sure?', :method => :delete %>
+ <% end %>
+</td>
+  </tr>
+</table>
+
+<% end %>
+
+
+
