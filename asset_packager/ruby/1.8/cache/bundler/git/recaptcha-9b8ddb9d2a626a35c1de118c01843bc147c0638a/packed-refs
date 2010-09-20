@@ -1,0 +1,10 @@
+# pack-refs with: peeled 
+139d81cec8251e55e257682fa03cb0b937b0ea0c refs/tags/v0.2.3
+40fa40445da533380fc0f94a95e1ea9c800be15f refs/tags/v0.2.2
+3a3448302b0184ba722f37b7a9c92cc079fc8579 refs/tags/v0.2.1
+c63cd3f8542da0854a2c910fbff1ab30d27886b8 refs/tags/v0.2.0
+db1d798e9137929fce8f98d40b229626d52e208a refs/tags/v0.1.0
+754d42e88b982dc9b8e1f2aae0ad11b2a537f946 refs/heads/master
+5de5cd8a9f0192c5478393ebff255bb1c6900bac refs/heads/gh-pages
+6119574cdb6ed51f9807a3249ac78d52fb4c6312 refs/heads/example-rails
+533ac6dcc96c6a70dd6ed4b6e8e69325c169dc19 refs/heads/c3bc7c49daf68365a0155c10f24eeabcf78b2867

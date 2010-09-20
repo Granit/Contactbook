@@ -1,0 +1,48 @@
+ HEAD [2010-08-28]
+====================
+
+    Features
+
+    Enhancements
+
+    Changes
+
+    Bugfixes
+
+ 0.3.0 [2010-08-28]
+====================
+
+    Changes
+       * renamed plugin jquery_autocomplete
+
+ 0.2.2 [2010-08-28]
+====================
+
+    Changes
+       * no more jRails gem dependancy
+
+ 0.2.1 [2010-08-27]
+====================
+
+    Features
+       * added :disabled option
+    Enhancements
+       * avoid a Rails 3 deprecation warning
+    Changes
+       * updated jquery-ui to v1.8.4
+
+ 0.2.0 [2010-05-08]
+====================
+
+    Features
+        * named scope items filtering
+    Enhancements
+        * gem available
+        * documentation with yard
+    Bugfixes
+        * fix gem initialization in rails
+
+ 0.1.0 [2010-02-03]
+====================
+
+    First release.

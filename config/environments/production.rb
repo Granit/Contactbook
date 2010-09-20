@@ -27,4 +27,7 @@ config.action_controller.perform_caching             = true
 
 # Enable threaded mode
 # config.threadsafe!
+ENV['RECAPTCHA_PUBLIC_KEY'] = '6LcbM70SAAAAANIwGV0VScb0o7tPTibp0h3CBrUG'
+ENV['RECAPTCHA_PRIVATE_KEY'] = '6LcbM70SAAAAAILXIAL_g4dOtvMEzOTXALpFImg-'
+include Recaptcha::ClientHelper
 end

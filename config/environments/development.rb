@@ -34,4 +34,9 @@ config.action_mailer.smtp_settings = {
   :user_name      => 'www',
   :password       => 'secret'
 }
+
+ENV['RECAPTCHA_PUBLIC_KEY'] = '6LcbM70SAAAAANIwGV0VScb0o7tPTibp0h3CBrUG'
+ENV['RECAPTCHA_PRIVATE_KEY'] = '6LcbM70SAAAAAILXIAL_g4dOtvMEzOTXALpFImg-'
+include Recaptcha::ClientHelper
 end
+

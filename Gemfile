@@ -9,11 +9,14 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'asset_packager'
 gem 'jquery_on_rails'
 gem 'jrails'
+gem 'jquery-rails'
+gem 'jquery_autocomplete'
 #gem 'cucumber-rails'
 gem 'cucumber-rails', '>=0.3.2'
 #config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.2' unless File.directory?(File.join(Rails.root, 'vendor/plugins/cucumber-rails'))
 gem 'database_cleaner'
 gem 'webrat'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -39,3 +42,5 @@ gem 'webrat'
 
 gem 'restful_authentication', :path => 'restful_authentication'
 #gem 'asset_packager', :path => 'vendor/plugins/asset_packager'
+gem 'recaptcha', :git => 'git://github.com/ambethia/recaptcha.git'
+

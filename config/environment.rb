@@ -19,4 +19,3 @@ Simpleblog::Application.initialize!
 
 #sudo gem install cucumber-rails
 #sudo gem install webrat
-

@@ -8,6 +8,9 @@ Bundler.require(:default, Rails.env) if defined?(Bundler)
 
 module Simpleblog
   class Application < Rails::Application
+  #include Recaptcha::ApplicationHelper
+  #include ReCaptcha::ViewHelper
+	
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.

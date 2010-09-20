@@ -1,0 +1,79 @@
+h1. jQuery autocomplete
+
+Rails Auto Completion plugin using jQuery-UI[1] widget; it works similarly to the original rails auto complete, but generating unobtrusive javascript. Additional features:
+
+* named scope items filtering, based on a customized list of autocomplete options.
+
+*WARNING NOTE*: This is an active work in progress - currently only used on few live projects right now. Use at your own discretion.
+
+h2. Usage example
+
+In the controller you can use the macro function as such
+
+<pre><code>class ExampleController < ApplicationController
+    auto_complete_for :fruit, :name
+    ...
+end
+</code></pre>
+
+In your views:
+
+<pre><code><%= text_field_with_auto_complete :fruit, :name %>
+</code></pre>
+
+be sure to include the jquery/jquery-ui javascript in your layout:
+
+<pre><code><%= javascript_include_tag 'jquery, 'jquery-ui.min', 'jquery-ui-i18n.min' %>
+</code></pre>
+
+h2. Named scopes with auto_complete_for:
+
+auto_complete_for now optionally accepts a block that is called with the item list and HTTP parameters when the auto complete AJAX request is received. This block can be used to specify that a named scope be used to generate a customized list of autocomplete options.
+
+h3. Example using anonymous scope:
+
+<pre><code>auto_complete_for :fruit, :shape do |items, params|
+  items.scoped( { :conditions => [ "colour = ?", params['fruit']['color'] ] })
+end
+</code></pre>
+
+h3. Example using named scope:
+
+Having the model:
+
+<pre><code>class Fruit < ActiveRecord::Base
+  belongs_to :owner
+  named_scope :by_owner,
+    lambda { |owner_name| {
+      :include => :owner,
+      :conditions => [ "owner.name = ?", owner_name ]
+    } }
+end
+</code></pre>
+
+In the controller you can use the macro function as such
+
+<pre><code>auto_complete_for :fruit, :name do | items, params |
+  items.by_owner(params['owner'])
+end
+</code></pre>
+
+h2. Todo
+
+* test, test... test!
+
+h2. Found a Bug?
+
+Please direct all queries to the issue tracker: "http://github.com/michelefranzin/jquery_autocomplete/issues":http://github.com/michelefranzin/jquery_autocomplete/issues
+
+h2. Credits
+
+Thanks to Paul Smith for the "original idea":http://github.com/elandesign/formtastic_autocomplete.git and Pat Shaughnessy for "inspirating":http://patshaughnessy.net/repeated_auto_complete me the named scope part.
+
+h2. References
+
+fn1. "jQuery-UI":http://jqueryui.com/
+
+h2. Copyright
+
+Copyright (c) 2010 Michele Franzin. See LICENSE for details.

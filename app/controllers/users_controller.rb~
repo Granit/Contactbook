@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
   # Be sure to include AuthenticationSystem in Application Controller instead
-  include AuthenticatedSystem
+#  include AuthenticatedSystem
   
 
   # render new.rhtml
@@ -11,7 +11,9 @@ class UsersController < ApplicationController
   def create
     logout_keeping_session!
     @user = User.new(params[:user])
-    success = @user && @user.save
+    #success = @user && @user.save
+    success = verify_recaptcha && @user && @user.save
+    flash[:error] = "The words do not match the ones in the recaptcha image!"
     if success && @user.errors.empty?
     	
     		#	UserMailer.deliver_registration_confirmation(@user)
