@@ -1,7 +1,7 @@
 <table id="form_kontakts"  width="80%" align="center" cellpadding="2" cellspacing="0">
   <tr><td width="20%" style="padding-left: 10; background-color: wheat;">
 
-<%= button_to 'New kontakt', new_kontakt_path %>
+<%= button_to 'New contact', new_kontakt_path %>
 <%= button_to 'Tags', tags_path, :method => 'get'%>
 <% form_tag kontakts_path, :method => 'get' do %>
   <p>
@@ -42,14 +42,15 @@
 </tr><tr class="odd">
 <td>Address</td><td><%= h @kontakt.address %>&nbsp;</td>
 <tr class="odd">
-<td>Tags</td><td colspan="2"><%@tag_names.each do |tag_name| %>
-<%= h tag_name %><br />
+<td>Tags</td><td colspan="2"><%@tagseach do |tag| %>
+<%= link_to tag.name, tag %><br />
 <%end %>&nbsp;</td>
 </tr>
 </table>
     <%= link_to 'Show', @kontakt %>
     <%= link_to 'Edit', edit_kontakt_path(@kontakt) %>
-    <%= link_to 'Destroy', @kontakt, :confirm => 'Are you sure?', :method => :delete %>
+    <%#= link_to 'Destroy', @kontakt, :confirm => 'Are you sure?', :method => :delete %>
+    <%= link_to 'Destroy',destroy_kontakt_path(:id=>@kontakt.id), :confirm => 'Are you sure?' %>
  <% end %>
 </td>
   </tr>

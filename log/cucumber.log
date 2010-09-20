@@ -6045,3 +6045,863 @@ Completed in 3ms (View: 2, DB: 0) | 200 OK [http://www.example.com/kontakts]
   [4;36;1mUser Load (0.1ms)[0m   [0;1mSELECT * FROM "users" [0m
   [4;35;1mKontakt Load (0.1ms)[0m   [0mSELECT * FROM "kontakts" [0m
   [4;36;1mTag Load (0.1ms)[0m   [0;1mSELECT * FROM "tags" [0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags"
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:21:24 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:21:24 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:22:38 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (18.3ms)
+Completed 200 OK in 28ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:22:38 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:22:38.249842', '20abd153d141b5767b13762697501891a3402061', 'big@mail.ru', 'biguser', '', NULL, NULL, '379616f1d465633dccc8730a259d0710ff6e51e4', '2010-09-20 00:22:38.249842')
+Redirected to http://example.org/
+Completed 302 Found in 30ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:22:38 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:22:38 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"small", "password"=>"[FILTERED]", "email"=>"small@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'small') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'small@gmail.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:22:38.404956', '9184bbcc16c326dfeee1bb0b9684b49b880a6bb4', 'small@gmail.com', 'small', '', NULL, NULL, '9c9d575de1b080c0c3bef71fcd10057c7e895894', '2010-09-20 00:22:38.404956')[0m
+Redirected to http://example.org/
+Completed 302 Found in 7ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:23:25 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:23:25 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:23:25.300849', '84eb511735cef6b8e64d0b72b8c1b10c96914ad0', 'big@mail.ru', 'biguser', '', NULL, NULL, 'a30909a26ab8f5ff31abe351e66072965a07b11b', '2010-09-20 00:23:25.300849')
+Redirected to http://example.org/
+Completed 302 Found in 33ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:23:25 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:23:25 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"small", "password"=>"[FILTERED]", "email"=>"small@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'small') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'small@gmail.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:23:25.404635', 'a74922deafd89055aba35baf4987d60a997dc7a2', 'small@gmail.com', 'small', '', NULL, NULL, '627bd87d45c2e741148fecc8da7f3f9cda1274ed', '2010-09-20 00:23:25.404635')[0m
+Redirected to http://example.org/
+Completed 302 Found in 6ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:23:56 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.0ms)
+Completed 200 OK in 27ms (Views: 25.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:23:56 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"bigguser", "password"=>"[FILTERED]", "email"=>"bigg@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'bigguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'bigg@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:23:56.805108', 'fe4ba88473478a206a258243997ead154d28669a', 'bigg@mail.ru', 'bigguser', '', NULL, NULL, '766059534fc047587b7ac3ec2f2adc3ed0387677', '2010-09-20 00:23:56.805108')
+Redirected to http://example.org/
+Completed 302 Found in 31ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:23:56 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:23:56 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"smallg", "password"=>"[FILTERED]", "email"=>"smallg@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'smallg') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'smallg@gmail.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:23:56.908360', '62526ca0e3f35348dd3ac641db8b60642faa006e', 'smallg@gmail.com', 'smallg', '', NULL, NULL, '43c598e9b20e40e1e432919de8aad1ceaebb9f50', '2010-09-20 00:23:56.908360')[0m
+Redirected to http://example.org/
+Completed 302 Found in 6ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:26:11 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 26ms (Views: 25.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:26:11 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:26:11.931735', 'fabd6600a494df8e71f4f6c552bd2a79ee6c7c62', 'big@mail.ru', 'biguser', '', NULL, NULL, '7e98d07a8d420246918f4737f21c7f9c256d0f57', '2010-09-20 00:26:11.931735')
+Redirected to http://example.org/
+Completed 302 Found in 33ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:26:11 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 69ms (Views: 68.9ms | ActiveRecord: 0.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:26:12 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"small", "password"=>"[FILTERED]", "email"=>"small@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'small') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'small@gmail.com') LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:26:12.027149', '0194c32cb80fd3d382d5def9478fbfb78ab99da9', 'small@gmail.com', 'small', '', NULL, NULL, '99bb80fa258bba4ff7bb3b4ac0ac85618dc62d30', '2010-09-20 00:26:12.027149')[0m
+Redirected to http://example.org/
+Completed 302 Found in 6ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:27:29 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.6ms)
+Completed 200 OK in 28ms (Views: 26.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:27:29 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:27:29.578616', '0825737dbedcea5573c637223ffad1a5b11e3c6d', 'big@mail.ru', 'biguser', '', NULL, NULL, '79a0c79c8875b4f646e153c7c5d82dea2502d02f', '2010-09-20 00:27:29.578616')
+Redirected to http://example.org/
+Completed 302 Found in 33ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:27:29 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 8ms (Views: 7.4ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:27:29 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"small", "password"=>"[FILTERED]", "email"=>"small@gmail.com"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'small') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'small@gmail.com') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:27:29.618466', '183ec070c6350744ef5f658b68a651872fe1dbe7', 'small@gmail.com', 'small', '', NULL, NULL, 'ec311a7746c6cf6bec3f214d1f099123e5d4f5f3', '2010-09-20 00:27:29.618466')[0m
+Redirected to http://example.org/
+Completed 302 Found in 6ms
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:36:33 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (42.7ms)
+Completed 200 OK in 72ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:36:33 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:36:33.457401', 'bc2095cac4db0dd287c8c78397103a76163d7e21', 'big@mail.ru', 'biguser', '', NULL, NULL, 'a1fd207a89ff3458e26acf34bf2f2ef940d50ea0', '2010-09-20 00:36:33.457401')
+Redirected to http://example.org/
+Completed 302 Found in 91ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:36:33 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 14.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:36:33 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 10ms (Views: 9.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:36:33 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"small", "password"=>"[FILTERED]", "email"=>"small@gmail.com"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'small') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'small@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:36:33.626401', '778781e5338ce140193c70ac5f29d42a41130a90', 'small@gmail.com', 'small', '', NULL, NULL, '02a8f90512f57b074f939db83ab996436f6a20ba', '2010-09-20 00:36:33.626401')
+Redirected to http://example.org/
+Completed 302 Found in 27ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:36:33 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:37:18 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:37:18 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:37:18.927752', 'fe6f25aa940c3912fbe4c9878dbedd1de6d44574', 'big@mail.ru', 'biguser', '', NULL, NULL, 'f3f9549ec8ce19cc72284d00321451068f715491', '2010-09-20 00:37:18.927752')
+Redirected to http://example.org/
+Completed 302 Found in 37ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:37:18 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"small", "password"=>"[FILTERED]", "email"=>"small@gmail.com"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'small') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'small@gmail.com') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:37:19.067327', '7873fab13bdff1ad52340b068f1044eca99ebf49', 'small@gmail.com', 'small', '', NULL, NULL, '648ba38fb176149b3ae0092844d8809839060ec6', '2010-09-20 00:37:19.067327')
+Redirected to http://example.org/
+Completed 302 Found in 6ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:37:19.117373', '256edb2281b153b21338a88c354eb5119c1085cb', 'big@mail.ru', 'biguser', '', NULL, NULL, '9a735e5bf3bfe076a8ba241fa1eb970990e8ccf1', '2010-09-20 00:37:19.117373')
+Redirected to http://example.org/
+Completed 302 Found in 5ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by SessionsController#destroy as HTML
+Redirected to http://example.org/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by HomeController#index as HTML
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by SessionsController#new as HTML
+Completed 200 OK in 13ms (Views: 13.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "utf8"=>"✓", "login"=>"biguser", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+Redirected to http://example.org/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:37:19.303614', '88e0e1257725abd839379f3479ca02e82bc624c7', 'big@mail.ru', 'biguser', '', NULL, NULL, 'b431b5cd27f78c409583dd7101db74a8b1910ea2', '2010-09-20 00:37:19.303614')
+Redirected to http://example.org/
+Completed 302 Found in 6ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/kontakts" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by KontaktsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE (user_id = '1')[0m
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/kontakts/new" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by KontaktsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (user_id = '1')[0m
+Rendered kontakts/_showtags.html.erb (0.7ms)
+Rendered kontakts/_tagform.html.erb (1.9ms)
+Rendered kontakts/_form.html.erb (25.7ms)
+Completed 200 OK in 59ms (Views: 46.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/kontakts" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by KontaktsController#create as HTML
+  Parameters: {"commit"=>"Save", "kontakt"=>{"name"=>"", "address"=>"<address>", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "kontakts" ("address", "created_at", "email", "firstname", "lastname", "middlename", "name", "phone_number", "updated_at", "user_id", "users_id") VALUES ('<address>', '2010-09-20 00:37:19.436042', 'big@mail.ru', 'Sidor', 'Ivanov', 'Petrovich', 'Ivanov Sidor Petrovich', '<phone_number>', '2010-09-20 00:37:19.436042', 1, NULL)[0m
+Redirected to http://example.org/kontakts/1
+Completed 302 Found in 8ms
+
+
+Started GET "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by KontaktsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mKontakt Load (0.2ms)[0m  SELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT * FROM "tags" INNER JOIN "kontakts_tags" ON "tags".id = "kontakts_tags".tag_id WHERE ("kontakts_tags".kontakt_id = 1 )
+Completed 200 OK in 19ms (Views: 14.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#new as HTML
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:37:19.580221', '69ce0ab9494c1ef85f1de26989cd9ce3ee4f99d2', 'big@mail.ru', 'biguser', '', NULL, NULL, 'ff6161a272eb049011c58ebc21de401d0a11a7e6', '2010-09-20 00:37:19.580221')[0m
+Redirected to http://example.org/
+Completed 302 Found in 6ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:37:19 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1[0m
+  [1m[35mKontakt Load (0.1ms)[0m  SELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users".* FROM "users"[0m
+  [1m[35mKontakt Load (0.1ms)[0m  SELECT "kontakts".* FROM "kontakts"
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags"[0m
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 26ms (Views: 25.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:38:25.307648', 'ad9de26c7b9569fba4523a2e5f140bcd462953a3', 'big@mail.ru', 'biguser', '', NULL, NULL, '34f3c10c528d5fb6e3713be002621a2f51e7e52e', '2010-09-20 00:38:25.307648')
+Redirected to http://example.org/
+Completed 302 Found in 34ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (67.0ms)
+Completed 200 OK in 75ms (Views: 73.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/logout" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by SessionsController#destroy as HTML
+Redirected to http://example.org/
+Completed 302 Found in 1ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by SessionsController#new as HTML
+Rendered sessions/new.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/session" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by SessionsController#create as HTML
+  Parameters: {"commit"=>"Log in", "utf8"=>"✓", "login"=>"biguser", "password"=>"[FILTERED]"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+Redirected to http://example.org/
+Completed 302 Found in 3ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:38:25 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:38:40 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 27ms (Views: 25.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:38:40 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:38:40.147927', 'c3cb31de125f71ce3a45b11c3613605108535bc2', 'big@mail.ru', 'biguser', '', NULL, NULL, '04ecbf9036dd8180e978931510ff98a09b2a3b01', '2010-09-20 00:38:40.147927')
+Redirected to http://example.org/
+Completed 302 Found in 34ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:38:40 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 75ms (Views: 23.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/kontakts" for 127.0.0.1 at Mon Sep 20 03:38:40 +0300 2010
+  Processing by KontaktsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE (user_id = '1')[0m
+Rendered kontakts/index.html.erb within layouts/kontakts (8.4ms)
+Completed 200 OK in 16ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/kontakts/new" for 127.0.0.1 at Mon Sep 20 03:38:40 +0300 2010
+  Processing by KontaktsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (user_id = '1')[0m
+Rendered kontakts/_showtags.html.erb (0.7ms)
+Rendered kontakts/_tagform.html.erb (2.2ms)
+Rendered kontakts/_form.html.erb (12.5ms)
+Rendered kontakts/new.html.erb within layouts/kontakts (18.6ms)
+Completed 200 OK in 34ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/kontakts" for 127.0.0.1 at Mon Sep 20 03:38:40 +0300 2010
+  Processing by KontaktsController#create as HTML
+  Parameters: {"commit"=>"Save", "kontakt"=>{"name"=>"", "address"=>"<address>", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "kontakts" ("address", "created_at", "email", "firstname", "lastname", "middlename", "name", "phone_number", "updated_at", "user_id", "users_id") VALUES ('<address>', '2010-09-20 00:38:40.320483', 'big@mail.ru', 'Sidor', 'Ivanov', 'Petrovich', 'Ivanov Sidor Petrovich', '<phone_number>', '2010-09-20 00:38:40.320483', 1, NULL)[0m
+Redirected to http://example.org/kontakts/1
+Completed 302 Found in 9ms
+
+
+Started GET "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:38:40 +0300 2010
+  Processing by KontaktsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mKontakt Load (0.2ms)[0m  SELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT * FROM "tags" INNER JOIN "kontakts_tags" ON "tags".id = "kontakts_tags".tag_id WHERE ("kontakts_tags".kontakt_id = 1 )
+Rendered kontakts/show.html.erb within layouts/kontakts (5.8ms)
+Completed 200 OK in 12ms (Views: 7.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:38:52 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:38:52 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:38:52.840695', '7df94093feb877500fc3f0338a6ddbb5d56a50c9', 'big@mail.ru', 'biguser', '', NULL, NULL, 'b722c9082f29a9fa26363195b0dc7fed4161c2b3', '2010-09-20 00:38:52.840695')
+Redirected to http://example.org/
+Completed 302 Found in 95ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:38:52 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)[0m
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts"[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT "tags".* FROM "tags"
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:40:53 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 27ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:40:53 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:40:54.001865', '59359a3f60fe0e9eb7201fed6b33b02658749e6d', 'big@mail.ru', 'biguser', '', NULL, NULL, '66e9fb0651cacdfba3fa2a23606c79c1ed288b0e', '2010-09-20 00:40:54.001865')
+Redirected to http://example.org/
+Completed 302 Found in 95ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/kontakts" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by KontaktsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE (user_id = '1')[0m
+Rendered kontakts/index.html.erb within layouts/kontakts (8.1ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/kontakts/new" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by KontaktsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (user_id = '1')[0m
+Rendered kontakts/_showtags.html.erb (0.8ms)
+Rendered kontakts/_tagform.html.erb (2.2ms)
+Rendered kontakts/_form.html.erb (11.9ms)
+Rendered kontakts/new.html.erb within layouts/kontakts (17.8ms)
+Completed 200 OK in 33ms (Views: 19.7ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/kontakts" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by KontaktsController#create as HTML
+  Parameters: {"commit"=>"Save", "kontakt"=>{"name"=>"", "address"=>"ul.New-Yorkskaya", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "kontakts" ("address", "created_at", "email", "firstname", "lastname", "middlename", "name", "phone_number", "updated_at", "user_id", "users_id") VALUES ('ul.New-Yorkskaya', '2010-09-20 00:40:54.111639', 'big@mail.ru', 'Sidor', 'Ivanov', 'Petrovich', 'Ivanov Sidor Petrovich', '<phone_number>', '2010-09-20 00:40:54.111639', 1, NULL)[0m
+Redirected to http://example.org/kontakts/1
+Completed 302 Found in 8ms
+
+
+Started GET "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by KontaktsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mKontakt Load (0.2ms)[0m  SELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTag Load (0.2ms)[0m  SELECT * FROM "tags" INNER JOIN "kontakts_tags" ON "tags".id = "kontakts_tags".tag_id WHERE ("kontakts_tags".kontakt_id = 1 )
+Rendered kontakts/show.html.erb within layouts/kontakts (5.8ms)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/kontakts/1/edit" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by KontaktsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKontakt Load (0.2ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered kontakts/_showtags.html.erb (0.1ms)
+Rendered kontakts/_tagform.html.erb (1.2ms)
+Rendered kontakts/_form.html.erb (6.0ms)
+Rendered kontakts/edit.html.erb within layouts/kontakts (10.9ms)
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by KontaktsController#update as HTML
+  Parameters: {"commit"=>"Save", "kontakt"=>{"name"=>"my friend Petrov", "address"=>"ul.New-Yorkskaya", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"722222", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>"1"}
+  [1m[36mKontakt Load (0.2ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "kontakts" SET "name" = 'my friend Petrov', "phone_number" = '722222', "updated_at" = '2010-09-20 00:40:54.173982' WHERE ("kontakts"."id" = 1)
+Redirected to http://example.org/kontakts/1
+Completed 302 Found in 5ms
+
+
+Started GET "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:40:54 +0300 2010
+  Processing by KontaktsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKontakt Load (0.2ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT * FROM "tags" INNER JOIN "kontakts_tags" ON "tags".id = "kontakts_tags".tag_id WHERE ("kontakts_tags".kontakt_id = 1 )[0m
+Rendered kontakts/show.html.erb within layouts/kontakts (102.0ms)
+Completed 200 OK in 106ms (Views: 102.9ms | ActiveRecord: 0.8ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mKontakt Load (0.2ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)[0m
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:41:24 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:41:24 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:41:24.571701', '1408bebdede121ea6a29079aebdc680000afa574', 'big@mail.ru', 'biguser', '', NULL, NULL, 'f63edbc384eed38da6ba5d07221cc2cae8a960ee', '2010-09-20 00:41:24.571701')
+Redirected to http://example.org/
+Completed 302 Found in 94ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:41:24 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 13.8ms | ActiveRecord: 1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)[0m
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:42:26 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.4ms)
+Completed 200 OK in 27ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:42:26 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:42:26.563782', 'b21839d8c6603e7b84b80bebbe3b11fe3ebc58f0', 'big@mail.ru', 'biguser', '', NULL, NULL, '4bf63501f80f68a5cd8975c4dfc6bb4c5021eabd', '2010-09-20 00:42:26.563782')
+Redirected to http://example.org/
+Completed 302 Found in 93ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:42:26 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)[0m
+
+
+Started GET "/signup" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by UsersController#new as HTML
+Rendered users/new.html.erb within layouts/application (17.3ms)
+Completed 200 OK in 27ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by UsersController#create as HTML
+  Parameters: {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"[FILTERED]", "login"=>"biguser", "password"=>"[FILTERED]", "email"=>"big@mail.ru"}}
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users"."id" FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT "users"."id" FROM "users" WHERE ("users"."email" = 'big@mail.ru') LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "crypted_password", "email", "login", "name", "remember_token", "remember_token_expires_at", "salt", "updated_at") VALUES ('2010-09-20 00:43:18.429130', '486ae2a79a43d975582063e9c702c342bb00375d', 'big@mail.ru', 'biguser', '', NULL, NULL, '49e5f8dc1729d71e51a430b925ef291c1ee74b5a', '2010-09-20 00:43:18.429130')
+Redirected to http://example.org/
+Completed 302 Found in 95ms
+
+
+Started GET "/" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+Rendered home/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 1.1ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)[0m
+
+
+Started GET "/kontakts" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE (user_id = '1')[0m
+Rendered kontakts/index.html.erb within layouts/kontakts (8.1ms)
+Completed 200 OK in 14ms (Views: 11.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/kontakts/new" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#new as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (user_id = '1')[0m
+Rendered kontakts/_showtags.html.erb (0.8ms)
+Rendered kontakts/_tagform.html.erb (2.4ms)
+Rendered kontakts/_form.html.erb (11.7ms)
+Rendered kontakts/new.html.erb within layouts/kontakts (17.4ms)
+Completed 200 OK in 31ms (Views: 19.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/kontakts" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#create as HTML
+  Parameters: {"commit"=>"Save", "kontakt"=>{"name"=>"", "address"=>"ul.New-Yorkskaya", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}}
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "kontakts" ("address", "created_at", "email", "firstname", "lastname", "middlename", "name", "phone_number", "updated_at", "user_id", "users_id") VALUES ('ul.New-Yorkskaya', '2010-09-20 00:43:18.541802', 'big@mail.ru', 'Sidor', 'Ivanov', 'Petrovich', 'Ivanov Sidor Petrovich', '<phone_number>', '2010-09-20 00:43:18.541802', 1, NULL)[0m
+Redirected to http://example.org/kontakts/1
+Completed 302 Found in 7ms
+
+
+Started GET "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mKontakt Load (0.3ms)[0m  SELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mTag Load (0.1ms)[0m  SELECT * FROM "tags" INNER JOIN "kontakts_tags" ON "tags".id = "kontakts_tags".tag_id WHERE ("kontakts_tags".kontakt_id = 1 )
+Rendered kontakts/show.html.erb within layouts/kontakts (5.7ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/kontakts/1/edit" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKontakt Load (0.2ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+Rendered kontakts/_showtags.html.erb (0.1ms)
+Rendered kontakts/_tagform.html.erb (1.2ms)
+Rendered kontakts/_form.html.erb (6.0ms)
+Rendered kontakts/edit.html.erb within layouts/kontakts (10.9ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#update as HTML
+  Parameters: {"commit"=>"Save", "kontakt"=>{"name"=>"my friend Petrov", "address"=>"ul.New-Yorkskaya", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"722222", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>"1"}
+  [1m[36mKontakt Load (0.2ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  UPDATE "kontakts" SET "name" = 'my friend Petrov', "phone_number" = '722222', "updated_at" = '2010-09-20 00:43:18.603077' WHERE ("kontakts"."id" = 1)
+Redirected to http://example.org/kontakts/1
+Completed 302 Found in 5ms
+
+
+Started GET "/kontakts/1" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mKontakt Load (0.3ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mTag Load (0.2ms)[0m  [1mSELECT * FROM "tags" INNER JOIN "kontakts_tags" ON "tags".id = "kontakts_tags".tag_id WHERE ("kontakts_tags".kontakt_id = 1 )[0m
+Rendered kontakts/show.html.erb within layouts/kontakts (78.9ms)
+Completed 200 OK in 84ms (Views: 79.8ms | ActiveRecord: 1.0ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mKontakt Load (0.2ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)[0m
+
+
+Started GET "/kontakts/destroy/1" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mKontakt Load (0.2ms)[0m  SELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."id" = 1) LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "kontakts" WHERE ("kontakts"."id" = 1)
+  [1m[36mTag Load (0.1ms)[0m  [1mSELECT * FROM "tags" INNER JOIN "kontakts_tags" ON "tags".id = "kontakts_tags".tag_id WHERE ("kontakts_tags".kontakt_id = 1 )[0m
+Redirected to http://example.org/kontakts
+Completed 302 Found in 5ms
+
+
+Started GET "/kontakts" for 127.0.0.1 at Mon Sep 20 03:43:18 +0300 2010
+  Processing by KontaktsController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."id" = 1) LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE (user_id = '1')[0m
+Rendered kontakts/index.html.erb within layouts/kontakts (5.6ms)
+Completed 200 OK in 9ms (Views: 6.5ms | ActiveRecord: 1.3ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT "users".* FROM "users" WHERE ("users"."login" = 'biguser') LIMIT 1
+  [1m[36mKontakt Load (0.1ms)[0m  [1mSELECT "kontakts".* FROM "kontakts" WHERE ("kontakts"."user_id" = 1)[0m

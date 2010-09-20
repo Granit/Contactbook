@@ -26,7 +26,9 @@ class KontaktsController < ApplicationController
   # GET /kontakts/1
   # GET /kontakts/1.xml
   def show
+  	
     @kontakt = Kontakt.find(params[:id])
+    if current_user.id == @kontakt.user_id
 	@tags = @kontakt.tags
 	@tag_names = []
   	@tags.each{|tag|
@@ -35,6 +37,12 @@ class KontaktsController < ApplicationController
     respond_to do |format|
       format.html # show.html.erb
       format.xml  { render :xml => @kontakt }
+    end
+    else
+    respond_to do |format|
+      format.html { redirect_to('/kontakts') }
+      format.xml  { head :ok }
+    end
     end
   end
 
@@ -49,7 +57,6 @@ class KontaktsController < ApplicationController
   	@new_tags.each{|tag|
 	@tag_names.push(tag.name)
 	}
-	flash[:notice] = "new #{[params]}"
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @kontakt }
@@ -59,6 +66,12 @@ class KontaktsController < ApplicationController
   # GET /kontakts/1/edit
   def edit
     @kontakt = Kontakt.find(params[:id])
+    unless current_user.id == @kontakt.user_id
+    respond_to do |format|
+      format.html { redirect_to('/kontakts') }
+      format.xml  { head :ok }
+    end
+    end
 		#@tags = @kontakt.tags
 		#@tag_names = []
   		#@tags.each{|tag|
@@ -81,7 +94,7 @@ class KontaktsController < ApplicationController
 	@kontakt['name'] = (params[:kontakt][:lastname].to_s+" "+params[:kontakt][:firstname].to_s + " "+ params[:kontakt][:middlename].to_s).strip if @kontakt['name'].blank?
     respond_to do |format|
       if @kontakt.save
-        flash[:notice] = "Contact #{params[:kontakt]} was successfully created. #{[params]}"
+        flash[:notice] = "Contact was successfully created."
         format.html { redirect_to(@kontakt) }
         format.xml  { render :xml => @kontakt, :status => :created, :location => @kontakt }
       else
@@ -111,32 +124,18 @@ class KontaktsController < ApplicationController
   # DELETE /kontakts/1
   # DELETE /kontakts/1.xml
   def destroy
+  	
     @kontakt = Kontakt.find(params[:id])
-    @kontakt.destroy
+    @kontakt.destroy if current_user.id == @kontakt.user_id
 
     respond_to do |format|
       format.html { redirect_to(kontakts_url) }
       format.xml  { head :ok }
     end
   end
-=begin  
-  def tag_filter
-  	@kontakts = Kontakt.search(params[:search], current_user.id)
-  	@tags = Tag.search(params[:search], current_user.id)
-  	@tag_names = ['']
-  	@tags.each{|tag|
-	@tag_names.push(tag.name)
-	}
 
-	@kontakt_names = []
-	@kontakts.each{|kontakt|
-	@kontakt_names.push(kontakt.name)
-	}
-  end
-=end  
   def add_tag
   	@tags = Tag.find_tag(params[:id], current_user.id)
-  	flash[:notice] = "add_tag #{params}"
   	render :partial => "kontakts/showtags"
   end
   

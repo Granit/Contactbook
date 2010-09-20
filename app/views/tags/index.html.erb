@@ -30,14 +30,15 @@
 <tr class="odd">
 <td width="20%">Contacts</td><td>
 <% @tag.kontakts.each do |kontakt|%>
-<%= h kontakt.name%><br />
+<%= link_to kontakt.name, kontakt %><br />
 <%end%>&nbsp;
 </td>
 </tr>
 </table>
     <%= link_to 'Show', @tag %>
     <%= link_to 'Edit', edit_tag_path(@tag) %>
-    <%= link_to 'Destroy', @tag, :confirm => 'Are you sure?', :method => :delete %>
+    <%#= link_to 'Destroy', @tag, :confirm => 'Are you sure?', :method => :delete %>
+    <%= link_to 'Destroy',destroy_tag_path(:id=>@tag.id), :confirm => 'Are you sure?' %>
  <% end %>
 </td>
   </tr>

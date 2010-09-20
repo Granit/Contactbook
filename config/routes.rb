@@ -7,12 +7,14 @@ Simpleblog::Application.routes.draw do |map|
   map.resources :users
   
   map.resource :session
-  
-  #map.index_kontakt '/kontakt/:user',		:controller => "kontakts", :action=>"index"
-  #map.new_kontakt '/kontakt/new/:user',		:controller => "kontakts", :action=>"new"
+
   map.resources :kontakts
+  
   map.resources :tags
-  #map.tag_filter '/kontakt/tag_filter',		:controller => "tags", :action=>"index"
+
+  map.destroy_kontakt "kontakts/destroy/:id", :controller => "kontakts", :action=>"destroy"
+  map.destroy_tag "tags/destroy/:id", :controller => "tags", :action=>"destroy"
+  
   map.add_tag '/kontakt/add_tag',		:controller => "kontakts", :action=>"add_tag"
 	map.root :controller => "home"
   # The priority is based upon order of creation: first created -> highest priority.

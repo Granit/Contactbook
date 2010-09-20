@@ -7,7 +7,8 @@
 
   <%= stylesheet_link_tag :all %>
   <%= javascript_include_tag :defaults %>
-  <%#= csrf_meta_tag %>
+  <%= csrf_meta_tag %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js", "application.js" %>
 </head>
 <body>
 <div id="container">

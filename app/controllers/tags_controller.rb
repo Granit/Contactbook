@@ -42,7 +42,6 @@ class TagsController < ApplicationController
   	
     @tag = Tag.new
 
-	flash[:notice] = "new #{[params]}"
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @tag }
@@ -65,7 +64,7 @@ class TagsController < ApplicationController
 
     respond_to do |format|
       if @tag.save
-        flash[:notice] = "Tag #{params[:tag]} was successfully created."
+        flash[:notice] = "Tag #{params[:tag][:name]} was successfully created."
         format.html { redirect_to(@tag) }
         format.xml  { render :xml => @tag, :status => :created, :location => @tag }
       else
@@ -120,7 +119,6 @@ class TagsController < ApplicationController
   
   def add_tag
   	@tags = Tag.find_tag(params[:id], current_user.id)
-  	flash[:notice] = "add_tag #{params}"
   	render :partial => "kontakts/showtags"
   end
   

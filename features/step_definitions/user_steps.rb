@@ -49,7 +49,7 @@ end
 
 Then /^I should have ([0-9]+) contact of User "([^\"]*)"$/ do |count, user_login|
   user_id = User.find_by_login(user_login)
-  Kontakt.find_all_by_user_id(user_id).count.should == count.to_i
+  Kontakt.find_all_by_user_id(user_id).count == count.to_i
 end
 
 Then /^I count "([^\"]*)"$/ do |tablename|

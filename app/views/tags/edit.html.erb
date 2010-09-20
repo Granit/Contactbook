@@ -2,5 +2,6 @@
 <center>
 <%= link_to 'Back', tags_path %> |
 <%= link_to 'Show', @tag %> |
-<%= link_to 'Destroy', @tag, :confirm => 'Are you sure?', :method => :delete %>
+<%#= link_to 'Destroy', @tag, :confirm => 'Are you sure?', :method => :delete %>
+<%= link_to 'Destroy',destroy_tag_path(:id=>@tag.id), :confirm => 'Are you sure?' %>
 </center>

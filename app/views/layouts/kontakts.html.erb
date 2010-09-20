@@ -6,6 +6,8 @@
 <%= javascript_include_tag :defaults %>
   <%#= javascript_include_merged :base %>
   <%#= stylesheet_link_merged :base %>
+  <%= csrf_meta_tag %>
+  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "jquery.rails.js", "application.js" %>
   <link media="only screen and (max-device-width: 480px)"  rel="stylesheet" type="text/css" href="/stylesheets/iphone.css"/>
   <meta name="viewport" content="width=480,initial-scale=0.65,user-scalable=no" />
 </head>

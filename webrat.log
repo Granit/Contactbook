@@ -1,0 +1,99 @@
+# Logfile created on Mon Sep 20 03:21:24 +0300 2010 by logger.rb/22285
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"smallpassword", "password"=>"smallpassword", "login"=>"small", "email"=>"small@gmail.com"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"smallpassword", "password"=>"smallpassword", "login"=>"small", "email"=>"small@gmail.com"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"biggpassword", "password"=>"biggpassword", "login"=>"bigguser", "email"=>"bigg@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"smallgpassword", "password"=>"smallgpassword", "login"=>"smallg", "email"=>"smallg@gmail.com"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"smallpassword", "password"=>"smallpassword", "login"=>"small", "email"=>"small@gmail.com"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"smallpassword", "password"=>"smallpassword", "login"=>"small", "email"=>"small@gmail.com"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"smallpassword", "password"=>"smallpassword", "login"=>"small", "email"=>"small@gmail.com"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"smallpassword", "password"=>"smallpassword", "login"=>"small", "email"=>"small@gmail.com"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /logout with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/logout"}
+REQUESTING PAGE: POST /login with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "utf8"=>"✓", "password"=>"bigpassword", "login"=>"biguser"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /kontakts with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /kontakts/new with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: POST /kontakts with {"commit"=>"Save", "kontakt"=>{"address"=>"<address>", "name"=>"", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}} and HTTP headers {"HTTP_REFERER"=>"/kontakts/new"}
+REQUESTING PAGE: GET http://example.org/kontakts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /logout with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/logout"}
+REQUESTING PAGE: POST /login with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /session with {"commit"=>"Log in", "utf8"=>"✓", "password"=>"bigpassword", "login"=>"biguser"} and HTTP headers {"HTTP_REFERER"=>"/login"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/session"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /kontakts with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /kontakts/new with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: POST /kontakts with {"commit"=>"Save", "kontakt"=>{"address"=>"<address>", "name"=>"", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}} and HTTP headers {"HTTP_REFERER"=>"/kontakts/new"}
+REQUESTING PAGE: GET http://example.org/kontakts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /kontakts with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /kontakts/new with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: POST /kontakts with {"commit"=>"Save", "kontakt"=>{"address"=>"ul.New-Yorkskaya", "name"=>"", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}} and HTTP headers {"HTTP_REFERER"=>"/kontakts/new"}
+REQUESTING PAGE: GET http://example.org/kontakts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: GET /kontakts/1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/kontakts/1"}
+REQUESTING PAGE: POST /kontakts/1 with {"commit"=>"Save", "kontakt"=>{"address"=>"ul.New-Yorkskaya", "name"=>"my friend Petrov", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"722222", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "_method"=>"put", "utf8"=>"✓", "id"=>{"id"=>""}} and HTTP headers {"HTTP_REFERER"=>"/kontakts/1/edit"}
+REQUESTING PAGE: GET http://example.org/kontakts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts/1"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET http://www.example.com/signup with {} and HTTP headers {}
+REQUESTING PAGE: POST /users with {"commit"=>"Sign up", "utf8"=>"✓", "user"=>{"password_confirmation"=>"bigpassword", "password"=>"bigpassword", "login"=>"biguser", "email"=>"big@mail.ru"}} and HTTP headers {"HTTP_REFERER"=>"http://www.example.com/signup"}
+REQUESTING PAGE: GET http://example.org/ with {} and HTTP headers {"HTTP_REFERER"=>"/users"}
+REQUESTING PAGE: GET /kontakts with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/"}
+REQUESTING PAGE: POST /kontakts/new with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: POST /kontakts with {"commit"=>"Save", "kontakt"=>{"address"=>"ul.New-Yorkskaya", "name"=>"", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"<phone_number>", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "utf8"=>"✓", "id"=>{"id"=>""}} and HTTP headers {"HTTP_REFERER"=>"/kontakts/new"}
+REQUESTING PAGE: GET http://example.org/kontakts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts"}
+REQUESTING PAGE: GET /kontakts/1/edit with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/kontakts/1"}
+REQUESTING PAGE: POST /kontakts/1 with {"commit"=>"Save", "kontakt"=>{"address"=>"ul.New-Yorkskaya", "name"=>"my friend Petrov", "middlename"=>"Petrovich", "lastname"=>"Ivanov", "phone_number"=>"722222", "firstname"=>"Sidor", "email"=>"big@mail.ru"}, "_method"=>"put", "utf8"=>"✓", "id"=>{"id"=>""}} and HTTP headers {"HTTP_REFERER"=>"/kontakts/1/edit"}
+REQUESTING PAGE: GET http://example.org/kontakts/1 with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts/1"}
+REQUESTING PAGE: GET /kontakts/destroy/1 with {} and HTTP headers {"HTTP_REFERER"=>"http://example.org/kontakts/1"}
+REQUESTING PAGE: GET http://example.org/kontakts with {} and HTTP headers {"HTTP_REFERER"=>"/kontakts/destroy/1"}

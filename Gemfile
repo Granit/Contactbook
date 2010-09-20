@@ -9,6 +9,11 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'asset_packager'
 gem 'jquery_on_rails'
 gem 'jrails'
+#gem 'cucumber-rails'
+gem 'cucumber-rails', '>=0.3.2'
+#config.gem 'cucumber-rails',   :lib => false, :version => '>=0.3.2' unless File.directory?(File.join(Rails.root, 'vendor/plugins/cucumber-rails'))
+gem 'database_cleaner'
+gem 'webrat'
 # Use unicorn as the web server
 # gem 'unicorn'
 

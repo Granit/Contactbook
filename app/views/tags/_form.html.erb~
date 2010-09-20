@@ -17,12 +17,7 @@
 </table>
 <% end %>
 </div>
-<%# kontakt_form.fields_for :tags do |tag_form| %>
-<p><%#= tag_form.label :name, 'Tag:' %> <%#= tag_form.text_field :name %> </p>
-<%# unless tag_form.object.nil? || tag_form.object.new_record? %>
-<p><%#= tag_form.label :_delete, 'Remove:' %> <%#= tag_form.check_box :_delete %> </p>
-<%# end %>
-<%# end %>
-<p><center><%= kontakt_form.submit "Save" %></center></p>
+
+<p><center><%= tag_form.submit "Save" %></center></p>
 <% end %>
 
