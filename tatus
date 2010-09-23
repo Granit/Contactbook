@@ -1,0 +1,47 @@
+commit 752633c50a510c946333068248aee45281ecdc95
+Author: Granit <sad78655@gmail.com>
+Date:   Thu Sep 23 18:44:17 2010 +0300
+
+    delete all backup files
+
+commit 41f6233d5f9284fbdaff23004bfc3862ebe943c5
+Author: Granit <sad78655@gmail.com>
+Date:   Thu Sep 23 18:22:29 2010 +0300
+
+    add gitignore
+
+commit 396fba51f7940d4f3e5c982e4e58595a65f3b7e8
+Author: Granit <granit@gratop.(none)>
+Date:   Mon Sep 20 06:38:21 2010 +0300
+
+    добавил капчу на регистрацию пользователей
+
+commit 78e347c62f7a22acb44d19c35123affde8ff06f5
+Author: Granit <granit@gratop.(none)>
+Date:   Mon Sep 20 04:05:56 2010 +0300
+
+    обновил переходы(destroy) для rails 3 ; обновил тесты для rails 3
+
+commit 78ccd9a1879e989ea00f431d09a9ac13c4c00648
+Author: Granit <granit@gratop.(none)>
+Date:   Sun Sep 19 23:48:20 2010 +0300
+
+    fix2 in modules - спец. добавлено to_s для выборок из бд
+
+commit 31fc79b157a1873d934add7869006b8e8a43042a
+Author: Granit <granit@gratop.(none)>
+Date:   Sun Sep 19 23:19:08 2010 +0300
+
+    fix in modules - спец. добавлено to_i для выборок из бд
+
+commit 963fe13c338138f273ffd9e461cd8fad32e8704b
+Author: Granit <granit@gratop.(none)>
+Date:   Sun Sep 19 05:19:11 2010 +0300
+
+    fix production.rb
+
+commit 9385068778f90251810f04987b622320ead992ee
+Author: Granit <granit@gratop.(none)>
+Date:   Sun Sep 19 05:12:59 2010 +0300
+
+    contactbook, first version
