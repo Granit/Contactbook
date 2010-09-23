@@ -1,5 +1,0 @@
-
-<% @tags.each do |tag| %>
-<%= hidden_field_tag 'tagids[]', tag.id %>
-<%=h tag.name %><br / >
-<% end %>&nbsp;

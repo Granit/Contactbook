@@ -1,7 +1,0 @@
-<h1>Editing kontakt</h1>
-
-<%= render :partial => "form" %>
-<center>
-<%= link_to 'Show', @kontakt %> |
-<%= link_to 'Back', kontakts_path %>
-</center>

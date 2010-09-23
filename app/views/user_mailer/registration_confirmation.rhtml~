@@ -1,3 +1,0 @@
-Hi <%= @user.name %>, 
-
-You were registrated at ...

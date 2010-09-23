@@ -1,8 +1,0 @@
-<h1>Editing contact</h1>
-
-<%= render :partial => "form" %>
-<center>
-<%= link_to 'Back', kontakts_path %> |
-<%= link_to 'Show', @kontakt %> |
-<%= link_to 'Destroy', @kontakt, :confirm => 'Are you sure?', :method => :delete %>
-</center>
