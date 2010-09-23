@@ -56849,3 +56849,73 @@ ActionController::RoutingError (No route matches "/javascripts/jquery-ui-i18n.mi
   
 
 Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/" for 127.0.0.1 at Thu Sep 23 18:42:08 +0300 2010
+  Processing by HomeController#index as HTML
+Rendered home/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/jquery-ui.min" for 127.0.0.1 at Thu Sep 23 18:42:08 +0300 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui.min"):
+  
+
+Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/javascripts/jquery-ui-i18n.min" for 127.0.0.1 at Thu Sep 23 18:42:08 +0300 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-i18n.min"):
+  
+
+Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.7ms)
+
+
+Started GET "/javascripts/jquery-ui-i18n.min" for 127.0.0.1 at Thu Sep 23 18:42:08 +0300 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-i18n.min"):
+  
+
+Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started POST "/login" for 127.0.0.1 at Thu Sep 23 18:42:09 +0300 2010
+  Processing by SessionsController#new as HTML
+  Parameters: {"authenticity_token"=>"v8ixHsVDa3Fs4AxYiFKkJCUdRL0z5Mq17D/cIT/qmzE="}
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_sessions_new_html_erb___866945687__613281518_0 at /home/granit/simpleblog/app/views/sessions/new.html.erb:3)
+Rendered sessions/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 20ms (Views: 19.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/javascripts/jquery-ui.min" for 127.0.0.1 at Thu Sep 23 18:42:09 +0300 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui.min"):
+  
+
+Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery-ui-i18n.min" for 127.0.0.1 at Thu Sep 23 18:42:09 +0300 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-i18n.min"):
+  
+
+Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
+
+
+Started GET "/javascripts/jquery-ui.min" for 127.0.0.1 at Thu Sep 23 18:42:09 +0300 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui.min"):
+  
+
+Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/javascripts/jquery-ui-i18n.min" for 127.0.0.1 at Thu Sep 23 18:42:10 +0300 2010
+
+ActionController::RoutingError (No route matches "/javascripts/jquery-ui-i18n.min"):
+  
+
+Rendered asset_packager/ruby/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.0ms)
