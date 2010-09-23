@@ -94,7 +94,7 @@ class KontaktsController < ApplicationController
 	@kontakt['name'] = (params[:kontakt][:lastname].to_s+" "+params[:kontakt][:firstname].to_s + " "+ params[:kontakt][:middlename].to_s).strip if @kontakt['name'].blank?
     respond_to do |format|
       if @kontakt.save
-        flash[:notice] = "Contact #{params[:kontakt]['name']} was successfully created."
+        flash[:notice] = "Contact was successfully created."
         format.html { redirect_to(@kontakt) }
         format.xml  { render :xml => @kontakt, :status => :created, :location => @kontakt }
       else
